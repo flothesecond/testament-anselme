@@ -182,20 +182,20 @@ var BALISES = [
   { id:3,  reponse:"15",   mot:"VAILLANCE", crypte:"EZROOZM XV",                                                                          chiffre:"Atbash",             indice:"Dans le bourg de Champlaurent, cherchez le plus grand édifice de pierre : celui où l'on baptise, où l'on marie, où l'on prie." },
   { id:4,  reponse:"5",    mot:"COMMERCE",  crypte:"PBZZREPR",                                                                            chiffre:"ROT13",              indice:"À deux pas de l'église, sur le chemin qui longe la route, un objet rouge est planté dans le sol ; discret et muet, mais dont l'utilité se révèle quand les flammes menacent." },
   { id:5,  reponse:"3",    mot:"DIGNITE",   crypte:"14 24 22 33 24 45 15",                                                                chiffre:"Polybe",             indice:"Bien au-delà de l'église, les anciens de Champlaurent reposent sous la pierre froide. Rejoignez leur demeure silencieuse." },
-  { id:6,  reponse:"2",    mot:"PROCES",    crypte:"PERCSO",                                                                               chiffre:"Rail Fence (3 rails)",          indice:"À l'écart du bourg, une toute petite chapelle se dresse à l'ouest. Sans enseigne, sans ornement, seule sa forme trahit sa vocation." },
+  { id:6,  reponse:"2",    mot:"PROCES",    crypte:"16 18 15 3 5 19",                                                                     chiffre:"Numéraire",          indice:"À l'écart du bourg, une toute petite chapelle se dresse à l'ouest. Sans enseigne, sans ornement, seule sa forme trahit sa vocation." },
   { id:7,  reponse:"10",   mot:"MERITANTS", crypte:"(Pigpen — voir fiche imprimée)",                                                      chiffre:"Pigpen",             indice:"Entre la chapelle et le pont, à l'ouest du bourg, les hommes modernes ont planté une haute structure de métal pour porter leurs voix invisibles d'un versant à l'autre." },
   { id:8,  reponse:"2",    mot:"PIERRE",    crypte:".--. .. . .-. .-. .",                                                                 chiffre:"Morse",              indice:"Là où la route de Glapigny s'en va vers le sud-ouest, un petit ouvrage de pierre enjambe le ruisseau. Mes mulets le franchissaient au pas, indifférents au courant." },
   { id:9,  reponse:"3",    mot:"TRESORS",   crypte:"01010100 01010010 01000101 01010011 01001111 01010010 01010011",                       chiffre:"Binaire",            indice:"En tout village qui se respecte, la République plante ses couleurs en hauteur. Cherchez où flotte l'étendard tricolore à Champlaurent." },
-  { id:10, reponse:"1116", mot:"FIERTE",    crypte:"🔑 ❄️ ⭐ 🌹 💰 ⭐",                                                     chiffre:"Substitution thématique", indice:"Sur le chemin du retour, au point où la route bascule enfin vers la vallée, un panneau marque le sommet. Moi, Anselme, je ne comptais pas les mètres, mais mes jambes, elles, s'en souvenaient." }
+  { id:10, reponse:"1116", mot:"FIERTE",    crypte:"XMPJXP",                                                                              chiffre:"Vigenère clé : SEL", indice:"Sur le chemin du retour, au point où la route bascule enfin vers la vallée, un panneau marque le sommet. Moi, Anselme, je ne comptais pas les mètres, mais mes jambes, elles, s'en souvenaient." }
 ];
 
 var TEAM_ORDERS = [
-  [1,3,6,9,2,5,8,4,7,10],
-  [2,5,8,4,7,1,3,6,9,10],
-  [4,7,1,5,8,2,6,3,9,10],
-  [5,8,2,7,1,4,9,3,6,10],
-  [7,6,4,8,2,5,3,1,9,10],
-  [8,2,3,1,4,7,5,6,9,10]
+  [3,7,9,1,5,2,8,4,6,10],
+  [6,1,4,8,2,9,3,7,5,10],
+  [9,4,2,5,7,3,6,1,8,10],
+  [2,8,7,3,6,4,1,5,9,10],
+  [5,3,8,6,1,7,4,9,2,10],
+  [8,6,1,9,4,5,7,2,3,10]
 ];
 
 function getBalise(baliseId) {
