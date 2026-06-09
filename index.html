@@ -99,7 +99,7 @@
   <div class="header">
     <div class="header-ornament">&#8939; &#10022; &#8939;</div>
     <h1>Le Testament<br>d&rsquo;Anselme Vallet</h1>
-    <div class="subtitle">Interface des Gardiens · Usage interne</div>
+    <div class="subtitle">Interface des Gardiens &mdash; Usage interne</div>
   </div>
 
   <div id="form-section">
@@ -129,7 +129,7 @@
           <option value="7">Balise 7</option>
           <option value="8">Balise 8</option>
           <option value="9">Balise 9</option>
-          <option value="10">Balise 10 · Col</option>
+          <option value="10">Balise 10 &mdash; Col</option>
         </select>
       </div>
     </div>
@@ -155,7 +155,7 @@
     <div class="result-card">
       <div class="result-card-header">
         <div class="result-card-icon">&#9998;</div>
-        <div class="result-card-label">Mot crypt&#233; · &#224; recopier sur le parchemin</div>
+        <div class="result-card-label">Mot crypt&#233; &mdash; &#224; recopier sur le parchemin</div>
         <div class="result-card-cipher" id="cipher-label"></div>
       </div>
       <div class="encrypted-word" id="encrypted-word"></div>
@@ -165,7 +165,7 @@
     <div class="result-card" id="clue-card">
       <div class="result-card-header">
         <div class="result-card-icon">&#8982;</div>
-        <div class="result-card-label" id="clue-label">Indice · &#224; partager avec les Pisteurs</div>
+        <div class="result-card-label" id="clue-label">Indice &mdash; &#224; partager avec les Pisteurs</div>
       </div>
       <div id="next-balise-badge-wrap"></div>
       <div class="clue-text" id="clue-text"></div>
@@ -182,11 +182,11 @@ var BALISES = [
   { id:3,  reponse:"15",   mot:"VAILLANCE", crypte:"EZROOZM XV",                                                                          chiffre:"Atbash",             indice:"Dans le bourg de Champlaurent, cherchez le plus grand édifice de pierre : celui où l'on baptise, où l'on marie, où l'on prie." },
   { id:4,  reponse:"5",    mot:"COMMERCE",  crypte:"PBZZREPR",                                                                            chiffre:"ROT13",              indice:"À deux pas de l'église, sur le chemin qui longe la route, un objet rouge est planté dans le sol ; discret et muet, mais dont l'utilité se révèle quand les flammes menacent." },
   { id:5,  reponse:"3",    mot:"DIGNITE",   crypte:"14 24 22 33 24 45 15",                                                                chiffre:"Polybe",             indice:"Bien au-delà de l'église, les anciens de Champlaurent reposent sous la pierre froide. Rejoignez leur demeure silencieuse." },
-  { id:6,  reponse:"2",    mot:"PROCES",    crypte:"16 18 15 3 5 19",                                                                     chiffre:"Numéraire",          indice:"À l'écart du bourg, une toute petite chapelle se dresse à l'ouest. Sans enseigne, sans ornement, seule sa forme trahit sa vocation." },
-  { id:7,  reponse:"10",   mot:"MERITANTS", crypte:"(Pigpen - voir fiche imprimée)",                                                      chiffre:"Pigpen",             indice:"Entre la chapelle et le pont, à l'ouest du bourg, les hommes modernes ont planté une haute structure de métal pour porter leurs voix invisibles d'un versant à l'autre." },
+  { id:6,  reponse:"2",    mot:"PROCES",    crypte:"PERCSO",                                                                               chiffre:"Rail Fence (3 rails)",          indice:"À l'écart du bourg, une toute petite chapelle se dresse à l'ouest. Sans enseigne, sans ornement, seule sa forme trahit sa vocation." },
+  { id:7,  reponse:"10",   mot:"MERITANTS", crypte:"(Pigpen — voir fiche imprimée)",                                                      chiffre:"Pigpen",             indice:"Entre la chapelle et le pont, à l'ouest du bourg, les hommes modernes ont planté une haute structure de métal pour porter leurs voix invisibles d'un versant à l'autre." },
   { id:8,  reponse:"2",    mot:"PIERRE",    crypte:".--. .. . .-. .-. .",                                                                 chiffre:"Morse",              indice:"Là où la route de Glapigny s'en va vers le sud-ouest, un petit ouvrage de pierre enjambe le ruisseau. Mes mulets le franchissaient au pas, indifférents au courant." },
   { id:9,  reponse:"3",    mot:"TRESORS",   crypte:"01010100 01010010 01000101 01010011 01001111 01010010 01010011",                       chiffre:"Binaire",            indice:"En tout village qui se respecte, la République plante ses couleurs en hauteur. Cherchez où flotte l'étendard tricolore à Champlaurent." },
-  { id:10, reponse:"1116", mot:"FIERTE",    crypte:"XMPJXP",                                                                              chiffre:"Vigenère clé : SEL", indice:"Sur le chemin du retour, au point où la route bascule enfin vers la vallée, un panneau marque le sommet. Moi, Anselme, je ne comptais pas les mètres, mais mes jambes, elles, s'en souvenaient." }
+  { id:10, reponse:"1116", mot:"FIERTE",    crypte:"XMPJXP",                                                                              chiffre:"Carré de Vigenère, clé : SEL", indice:"Sur le chemin du retour, au point où la route bascule enfin vers la vallée, un panneau marque le sommet. Moi, Anselme, je ne comptais pas les mètres, mais mes jambes, elles, s'en souvenaient." }
 ];
 
 var TEAM_ORDERS = [
@@ -253,9 +253,9 @@ function showResult(team, baliseId, balise) {
 
   var headerEl = document.getElementById("result-header");
   if (isLast) {
-    headerEl.innerHTML = '<div class="final-badge">&#10022; Balise finale · Col</div><p style="font-style:italic;color:var(--ink-faded);font-size:0.95rem;margin-bottom:0.5rem;">L\'équipe ' + team + ' a atteint le Col. Rassemblez-vous pour lire le parchemin.</p>';
+    headerEl.innerHTML = '<div class="final-badge">&#10022; Balise finale &mdash; Col</div><p style="font-style:italic;color:var(--ink-faded);font-size:0.95rem;margin-bottom:0.5rem;">L\'équipe ' + team + ' a atteint le Col. Rassemblez-vous pour lire le parchemin.</p>';
   } else {
-    headerEl.innerHTML = '<p style="font-size:0.85rem;color:var(--ink-ghost);margin-bottom:0.3rem;">&#201;quipe ' + team + ' · Balise ' + baliseId + '</p>';
+    headerEl.innerHTML = '<p style="font-size:0.85rem;color:var(--ink-ghost);margin-bottom:0.3rem;">&#201;quipe ' + team + ' &mdash; Balise ' + baliseId + '</p>';
   }
 
   document.getElementById("cipher-label").textContent = balise.chiffre;
