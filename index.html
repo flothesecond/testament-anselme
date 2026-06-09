@@ -324,13 +324,13 @@ function showResult(team, baliseId, balise) {
 
   var headerEl = document.getElementById("result-header");
   if (isLast) {
-    headerEl.innerHTML = '<div class="final-badge">&#10022; Balise finale &mdash; Col</div><p style="font-style:italic;color:var(--ink-faded);font-size:0.95rem;margin-bottom:0.5rem;">L\'équipe ' + team + ' a atteint le Col. Rassemblez-vous pour lire le parchemin.</p>';
+    headerEl.innerHTML = '<div class="final-badge">&#10022; Balise finale</div><p style="font-style:italic;color:var(--ink-faded);font-size:0.95rem;margin-bottom:0.5rem;">L\'équipe ' + team + ' a atteint le Col. Rassemblez-vous pour lire le parchemin.</p>';
   } else {
     headerEl.innerHTML = '<p style="font-size:0.85rem;color:var(--ink-ghost);margin-bottom:0.3rem;">&#201;quipe ' + team + ' &mdash; Balise ' + baliseId + '</p>';
   }
 
   document.getElementById("cipher-label").textContent = balise.chiffre;
-  document.getElementById("encrypted-word").textContent = balise.crypte;
+  document.getElementById("encrypted-word").innerHTML = balise.crypte;
   document.getElementById("missing-word-badge").textContent = "Mot [" + baliseId + "] du parchemin";
 
   var badgeWrap = document.getElementById("next-balise-badge-wrap");
